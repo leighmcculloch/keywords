@@ -25,7 +25,7 @@ A list and count of keywords in programming languages.
 
 ## Why does it matter?
 
-The number of keywords in a programming language can be an indication to it's simplicity/complexity, and that can impact the simplicity/complexity of the solutions that developers produce using it. Complex solutions can be more expensive to maintain and difficult to hire for.
+The number of keywords in a programming language _can_ be an indication to it's simplicity/complexity, and that can impact the simplicity/complexity of the solutions that developers produce using it. Complex solutions can be more expensive to maintain and difficult to hire for. However, this is dependent on many factors and keyword count is only one; language idioms also play a massive part.
 
 ## Contribute
 
