@@ -16,11 +16,11 @@ A list and count of keywords in programming languages.
 │                                   ...... ...... ...... ...... ...... │
 │                                   ...... ...... ...... ...... ...... │
 │                     ...... ...... ...... ...... ...... ...... ...... │
-│              ...... ...... ...... ...... ...... ...... ...... ...... │
 │       ...... ...... ...... ...... ...... ...... ...... ...... ...... │
 │...... ...... ...... ...... ...... ...... ...... ...... ...... ...... │
-│..24.. ..25.. ..32.. ..33.. ..36.. ..50.. ..52.. ..89.. .100.. .109.. │
-│Erlang Go     C      Python Ruby   Java   Rust   Swift  C#     C++    │
+│...... ...... ...... ...... ...... ...... ...... ...... ...... ...... │
+│..25.. ..26.. ..32.. ..33.. ..36.. ..50.. ..52.. ..89.. .100.. .109.. │
+│Go     Erlang C      Python Ruby   Java   Rust   Swift  C#     C++    │
 └──────────────────────────────────────────────────────────────────────┘
 
 ## Why does it matter?
@@ -33,14 +33,6 @@ Don't see a language here? Please open a pull request adding it!
 
 ## Keyword List
 
-### Erlang (24 keywords)
-
-after        and          andalso      begin        bnot
-bor          bsl          bsr          bxor         case
-catch        div          end          fun          if
-not          of           or           orelse       receive
-rem          try          when         xor
-
 ### Golang (25 keywords)
 
 break        default      func         interface    select
@@ -48,6 +40,15 @@ case         defer        go           map          struct
 chan         else         goto         package      switch
 const        fallthrough  if           range        type
 continue     for          import       return       var
+
+### Erlang (26 keywords)
+
+after        and          andalso      begin        bnot
+bor          bsl          bsr          bxor         case
+catch        cond         div          end          fun
+if           let          not          of           or
+orelse       receive      rem          try          when
+xor
 
 ### C (32 keywords)
 
