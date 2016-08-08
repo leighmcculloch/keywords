@@ -41,7 +41,7 @@ catch        div          end          fun          if
 not          of           or           orelse       receive
 rem          try          when         xor
 
-### Golang (25 kewords)
+### Golang (25 keywords)
 
 break        default      func         interface    select
 case         defer        go           map          struct
@@ -49,7 +49,7 @@ chan         else         goto         package      switch
 const        fallthrough  if           range        type
 continue     for          import       return       var
 
-### C (32 kewords)
+### C (32 keywords)
 
 auto         double       int          struct       break
 else         long         switch       case         enum
@@ -59,7 +59,7 @@ continue     for          signed       void         default
 goto         sizeof       volatile     do           if
 static       while
 
-### Python (33 kewords)
+### Python (33 keywords)
 
 False        class        finally      is           return
 None         continue     for          lambda       try
@@ -69,7 +69,7 @@ as           elif         if           or           yield
 assert       else         import       pass         break
 except       in           raise
 
-### Ruby (36 kewords)
+### Ruby (36 keywords)
 
 alias        and          begin        break        case
 class        def          defined?     do           else
@@ -80,7 +80,7 @@ return       self         super        then         true
 undef        unless       until        when         while
 yield
 
-### Java (50 kewords)
+### Java (50 keywords)
 
 abstract     continue     for          new          switch
 assert       default      goto         package      synchronized
@@ -107,7 +107,7 @@ super        trait        true         type         typeof
 unsafe       unsized      use          virtual      where
 while        yield
 
-### Swift (89 kewords)
+### Swift (89 keywords)
 
 associatedtype class          deinit         enum
 extension      func           import         init
