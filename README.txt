@@ -108,6 +108,20 @@ super        trait        true         type         typeof
 unsafe       unsized      use          virtual      where
 while        yield
 
+### Dart (54 keywords)
+
+abstract     as           assert       async        await
+break        case         catch        class        const
+continue     covariant    default      deferred     do
+dynamic      else         enum         export       extends
+external     factory      false        final        finally
+for          get          if           implements   import
+in           is           library      new          null
+operator     part         rethrow      return       set
+static       super        switch       sync         this
+throw        true         try          typedef      var
+void         while        with         yield
+
 ### Swift (89 keywords)
 
 associatedtype class          deinit         enum
