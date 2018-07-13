@@ -81,7 +81,7 @@ return       self         super        then         true
 undef        unless       until        when         while
 yield
 
-### Java (50 keywords)
+### Java (51 keywords)
 
 abstract     continue     for          new          switch
 assert       default      goto         package      synchronized
