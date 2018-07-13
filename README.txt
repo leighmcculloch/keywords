@@ -19,7 +19,7 @@ A list and count of keywords in programming languages.
 │       ...... ...... ...... ...... ...... ...... ...... ...... ...... ...... │
 │...... ...... ...... ...... ...... ...... ...... ...... ...... ...... ...... │
 │...... ...... ...... ...... ...... ...... ...... ...... ...... ...... ...... │
-│..25.. ..26.. ..32.. ..33.. ..36.. ..50.. ..52.. ..54.. ..89.. .100.. .109.. │
+│..25.. ..26.. ..32.. ..33.. ..36.. ..51.. ..52.. ..54.. ..89.. .100.. .109.. │
 │Go     Erlang C      Python Ruby   Java   Rust   Dart   Swift  C#     C++    │
 └─────────────────────────────────────────────────────────────────────────────┘
 
@@ -93,6 +93,7 @@ catch        extends      int          short        try
 char         final        interface    static       void
 class        finally      long         strictfp     volatile
 const        float        native       super        while
+_ (underscore)
 
 ### Rust (52 keywords)
 
