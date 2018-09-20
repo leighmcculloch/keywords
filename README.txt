@@ -19,7 +19,7 @@ A list and count of keywords in programming languages.
 │       ...... ...... ...... ...... ...... ...... ...... ...... ...... ...... │
 │...... ...... ...... ...... ...... ...... ...... ...... ...... ...... ...... │
 │...... ...... ...... ...... ...... ...... ...... ...... ...... ...... ...... │
-│..25.. ..26.. ..32.. ..33.. ..36.. ..51.. ..52.. ..54.. ..89.. .100.. .109.. │
+│..25.. ..26.. ..32.. ..35.. ..36.. ..51.. ..52.. ..54.. ..89.. .100.. .109.. │
 │Go     Erlang C      Python Ruby   Java   Rust   Dart   Swift  C#     C++    │
 └─────────────────────────────────────────────────────────────────────────────┘
 
@@ -60,15 +60,15 @@ continue     for          signed       void         default
 goto         sizeof       volatile     do           if
 static       while
 
-### Python (33 keywords)
+### Python (35 keywords)
 
-False        class        finally      is           return
-None         continue     for          lambda       try
-True         def          from         nonlocal     while
-and          del          global       not          with
-as           elif         if           or           yield
-assert       else         import       pass         break
-except       in           raise
+False        await        else         import       pass
+None         break        except       in           raise
+True         class        finally      is           return
+and          continue     for          lambda       try
+as           def          from         nonlocal     while
+assert       del          global       not          with
+async        elif         if           or           yield
 
 ### Ruby (36 keywords)
 
