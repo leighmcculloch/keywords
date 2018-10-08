@@ -2,8 +2,8 @@ package main
 
 import "github.com/gizak/termui"
 
-var labels = []string{"Go", "Erlang", "C", "Python", "Ruby", "Java", "Rust", "Dart", "Swift", "C#", "C++"}
-var values = []int{25, 26, 32, 35, 36, 51, 52, 54, 89, 100, 109}
+var labels = []string{"Go", "Erlang", "C", "Python", "Ruby", "JS", "Java", "Rust", "Dart", "Swift", "C#", "C++"}
+var values = []int{25, 26, 32, 35, 36, 49, 51, 52, 54, 89, 100, 109}
 
 func main() {
 	if err := termui.Init(); err != nil {
