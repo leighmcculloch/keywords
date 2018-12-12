@@ -1,0 +1,38 @@
+# Keywords
+
+A list and count of keywords in programming languages.
+
+![Languages by keyword](chart.png)
+
+## Why does it matter?
+
+The number of keywords in a programming language _can_ be an indication to it's simplicity/complexity, and that can impact the simplicity/complexity of the solutions that developers produce using it. Complex solutions can be more expensive to maintain and difficult to hire for. However, this is dependent on many factors and keyword count is only one; language idioms also play a massive part.
+
+## Contribute
+
+Don't see a language here? Please open a pull request adding it!
+
+## Keyword List
+
+{{ $alpha := alphabetize . -}}
+
+{{ range $alpha -}}
+* [{{ .Name }} ({{.Version}}) ({{ len .Keywords}} keywords)](#{{slug (printf "%s (%s) (%d) keywords" .Name .Version (len .Keywords))}})
+{{ end }}
+{{ range $alpha -}}
+### {{ .Name }} ({{.Version}}) ({{ len .Keywords}} keywords)
+{{$chunks := chunk .Keywords 4 -}}
+
+| | | | |
+|---|---|---|---|
+{{ range $chunks -}}
+| {{ range . }} {{ . }} |{{end }}
+{{ end }}
+
+#### Sources:
+
+{{ range .Sources -}}
+  [{{.}}]({{.}})
+{{ end -}}
+
+{{ end }}
