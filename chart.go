@@ -1,29 +1,148 @@
 package main
 
-import "github.com/gizak/termui"
+import (
+	"bytes"
+	"fmt"
+	"io/ioutil"
+	"log"
+	"sort"
+	"text/template"
 
-var labels = []string{"Go", "Erlang", "C", "Python", "Ruby", "JS", "Java", "Rust", "Dart", "Swift", "C#", "C++"}
-var values = []int{25, 26, 32, 35, 36, 49, 51, 52, 54, 89, 100, 109}
+	"github.com/go-yaml/yaml"
+	"github.com/gosimple/slug"
+	"github.com/wcharczuk/go-chart"
+)
+
+type Languages []Language
+
+func (ls Languages) Len() int {
+	return len(ls)
+}
+
+func (ls Languages) Less(i, j int) bool {
+	return len(ls[i].Keywords) < len(ls[j].Keywords)
+}
+
+func (ls Languages) Swap(i, j int) {
+	tmp := ls[i]
+	ls[i] = ls[j]
+	ls[j] = tmp
+}
+
+type AlphaLanguages Languages
+
+func (ls AlphaLanguages) Len() int {
+	return len(ls)
+}
+
+func (ls AlphaLanguages) Less(i, j int) bool {
+	switch {
+	case ls[i].Name < ls[j].Name, ls[i].Name > ls[j].Name:
+		return ls[i].Name < ls[j].Name
+	default:
+		return ls[i].Version < ls[j].Version
+	}
+}
+
+func (ls AlphaLanguages) Swap(i, j int) {
+	tmp := ls[i]
+	ls[i] = ls[j]
+	ls[j] = tmp
+}
+
+type Language struct {
+	Name     string   `yaml:"name"`
+	Version  string   `yaml:"version"`
+	Keywords []string `yaml:"keywords"`
+	Sources  []string `yaml:"sources"`
+}
+
+var funcMap = template.FuncMap{
+	"chunk": func(sl []string, ch int) [][]string {
+		l := len(sl) / ch
+		if len(sl)%ch != 0 {
+			l++
+		}
+		slsl := make([][]string, l)
+		for i := 0; i < l; i++ {
+			if ch*i+ch >= len(sl) {
+				slsl[i] = sl[i*ch:]
+			} else {
+				slsl[i] = sl[i*ch : (i+1)*ch]
+			}
+		}
+		return slsl
+	},
+	"alphabetize": func(ls Languages) Languages {
+		tmp := make([]Language, len(ls))
+		copy(tmp, ls)
+		lsaf := AlphaLanguages(tmp)
+		sort.Sort(lsaf)
+
+		return Languages(lsaf)
+	},
+	"slug": slug.Make,
+}
+
+const tmplFile = "README.md.tmpl"
+const dataFile = "chart.yaml"
+const chartFile = "chart.png"
+const readmeFile = "README.md"
 
 func main() {
-	if err := termui.Init(); err != nil {
-		panic(err)
+	//read in the YAML file and build the data set
+	data := Languages{}
+	dataBytes, err := ioutil.ReadFile(dataFile)
+	if err != nil {
+		log.Fatal(err)
 	}
-	defer termui.Close()
+	err = yaml.Unmarshal(dataBytes, &data)
+	sort.Sort(data)
 
-	c := termui.NewBarChart()
-	c.DataLabels = labels
-	c.Data = values
-	c.BarWidth = 6
-	c.BarGap = 1
-	c.Width = c.BarWidth*len(labels) + len(labels) + 2
-	c.Height = 20
-	c.CellChar = '.'
+	//render and save the chart
+	chartData := make([]chart.Value, len(data))
+	for i := range data {
+		chartData[i] = chart.Value{Value: float64(len(data[i].Keywords)), Label: fmt.Sprintf("%s (%s)", data[i].Name, data[i].Version), Style: chart.StyleShow()}
+	}
 
-	termui.Render(c)
+	barchart := chart.BarChart{
+		Title:      "Programming languages by keyword count",
+		TitleStyle: chart.StyleShow(),
+		XAxis:      chart.StyleShow(),
+		YAxis: chart.YAxis{
+			Name:      "Keywords",
+			Style:     chart.StyleShow(),
+			Ascending: true,
+			ValueFormatter: func(v interface{}) string {
+				return fmt.Sprintf("%d", int(v.(float64)))
+			},
+			Ticks: []chart.Tick{
+				{0, "0"},
+				{10, "10"},
+				{20, "20"},
+				{30, "30"},
+				{40, "40"},
+				{50, "50"},
+				{60, "60"},
+				{70, "70"},
+				{80, "80"},
+			},
+		},
+		UseBaseValue: true,
+		BaseValue:    0,
+		Bars:         chartData,
+	}
 
-	termui.Handle("/sys/kbd/q", func(termui.Event) {
-		termui.StopLoop()
-	})
-	termui.Loop()
+	buf := &bytes.Buffer{}
+	err = barchart.Render(chart.PNG, buf)
+	ioutil.WriteFile(chartFile, buf.Bytes(), 0644)
+
+	//compile the final from the template
+	slug.CustomSub = map[string]string{
+		".": "",
+	}
+	t := template.Must(template.New(tmplFile).Funcs(funcMap).ParseFiles(tmplFile))
+	buf = &bytes.Buffer{}
+	t.Execute(buf, data)
+	ioutil.WriteFile(readmeFile, buf.Bytes(), 0644)
 }
