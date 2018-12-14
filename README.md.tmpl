@@ -1,6 +1,7 @@
 # Keywords
 
-A list and count of keywords in programming languages.
+A list and count of keywords in programming languages. Based on work originally
+compiled by [@leighmcculloch](https://github.com/leighmcculloch) and contributors.
 
 ![Languages by keyword](chart.png)
 
