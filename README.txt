@@ -33,7 +33,7 @@ Don't see a language here? Please open a pull request adding it!
 
 ## Similar Work
 
-* https://github.com/e3b0c442/keywords - A expanded version of this list, including a large collection of languages and formal references.
+* https://github.com/e3b0c442/keywords - An expanded version of this list, including a large collection of languages and formal references.
 
 ## Keyword List
 
