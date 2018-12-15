@@ -31,6 +31,10 @@ The number of keywords in a programming language _can_ be an indication to it's 
 
 Don't see a language here? Please open a pull request adding it!
 
+## Similar Work
+
+* https://github.com/e3b0c442/keywords - A expanded version of this list, including a large collection of languages and formal references.
+
 ## Keyword List
 
 ### Golang (25 keywords)
