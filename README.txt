@@ -37,6 +37,14 @@ Don't see a language here? Please open a pull request adding it!
 
 ## Keyword List
 
+### Lua (22 keywords)
+
+and          break        do           else         elseif
+end          false        for          function     goto
+if           in           local        nil          not
+or           repeat       return       then         true
+until        while
+
 ### Golang (25 keywords)
 
 break        default      func         interface    select
