@@ -43,7 +43,7 @@ steps:
   displayName: 'Push auto-generated content'
   env:
     GITHUB_PAT: $(github_pat)
-  condition: and(succeeded(), eq(variables['Build.Reason'], 'IndividualCI'))
+  condition: and(succeeded(), in(variables['Build.Reason'], 'IndividualCI', 'Manual'))
 
 
 
