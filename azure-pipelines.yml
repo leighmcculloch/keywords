@@ -35,9 +35,11 @@ steps:
   displayName: 'Get dependencies, then build'
 
 - script: |
+    git config --global user.email "nick@e3b0c442.io"
+    git config --global user.name "Nick Meyer"
     git remote set-url origin https://${GITHUB_PAT}@github.com/e3b0c442/keywords
     git add README.md chart.png
-    git commit -m "[skip ci] Push changes"
+    git commit -m "[skip ci] Rebuild README.md and chart.png from chart.yaml update"
     git push origin master
   workingDirectory: '$(modulePath)'
   displayName: 'Push auto-generated content'
