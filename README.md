@@ -22,6 +22,7 @@ Don't see a language here? Please open a pull request adding it!
 * [Dart (1) (33 keywords)](#dart-1-33-keywords)
 * [Elixir (1.7) (15 keywords)](#elixir-17-15-keywords)
 * [Erlang (21.2) (27 keywords)](#erlang-212-27-keywords)
+* [Fortran (Fortran 2008) (103 keywords)](#fortran-fortran-2008-103-keywords)
 * [Go (1.11) (25 keywords)](#go-111-25-keywords)
 * [JS (ES2018) (34 keywords)](#js-es2018-34-keywords)
 * [Java (SE 11) (51 keywords)](#java-se-11-51-keywords)
@@ -170,6 +171,40 @@ Don't see a language here? Please open a pull request adding it!
 #### Sources:
 
 [http://erlang.org/doc/reference_manual/introduction.html#reserved-words](http://erlang.org/doc/reference_manual/introduction.html#reserved-words)
+### Fortran (Fortran 2008) (103 keywords)
+| | | | |
+|---|---|---|---|
+|  abstract | allocatable | allocate | assign |
+|  associate | asynchronous | backspace | bind |
+|  block | block data | call | case |
+|  class | close | codimension | common |
+|  contains | contiguous | continue | critical |
+|  cycle | data | deallocate | deferred |
+|  dimension | do | do concurrent | elemental |
+|  else | else if | elsewhere | end |
+|  endfile | endif | entry | enum |
+|  enumerator | equivalence | error stop | exit |
+|  extends | external | final | flush |
+|  forall | format | function | generic |
+|  goto | if | implicit | import |
+|  include | inquire | intent | interface |
+|  intrinsic | lock | module | namelist |
+|  non_overridable | nopass | nullify | only |
+|  open | operator | optional | parameter |
+|  pass | pause | pointer | print |
+|  private | procedure | program | protected |
+|  public | pure | read | recursive |
+|  result | return | rewind | rewrite |
+|  save | select | sequence | stop |
+|  submodule | subroutine | sync all | sync images |
+|  sync memory | target | then | unlock |
+|  use | value | volatile | wait |
+|  where | while | write |
+
+
+#### Sources:
+
+[http://fortranwiki.org/fortran/show/Keywords](http://fortranwiki.org/fortran/show/Keywords)
 ### Go (1.11) (25 keywords)
 | | | | |
 |---|---|---|---|
