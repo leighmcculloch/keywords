@@ -3,6 +3,8 @@
 A list and count of keywords in programming languages. Based on work originally
 compiled by [@leighmcculloch](https://github.com/leighmcculloch) and contributors.
 
+_2020 update:_ I'm slowly working through this list and trying to standardize the meaning of "keyword" to be any word with special meaning in the language, as opposed to "reserved words" which cannot be used as identifiers. You may see some drastic changes depending on the language.
+
 ![Languages by keyword](chart.png)
 
 ## Why does it matter?
@@ -17,25 +19,29 @@ Don't see a language here? Please open a pull request adding it!
 
 * [C (ANSI) (32 keywords)](#c-ansi-32-keywords)
 * [C (C18) (44 keywords)](#c-c18-44-keywords)
-* [C# (ISO/IEC 23270:2018) (77 keywords)](#c-iso-iec-23270-2018-77-keywords)
-* [C++ (C++17) (73 keywords)](#c-c-17-73-keywords)
-* [Dart (1) (33 keywords)](#dart-1-33-keywords)
+* [C# (8.0) (107 keywords)](#c-80-107-keywords)
+* [C++ (C++17) (84 keywords)](#c-c-17-84-keywords)
+* [C++ (C++98) (74 keywords)](#c-c-98-74-keywords)
+* [Dart (2.2) (33 keywords)](#dart-22-33-keywords)
 * [Elixir (1.10) (15 keywords)](#elixir-110-15-keywords)
 * [Erlang (23) (27 keywords)](#erlang-23-27-keywords)
 * [Fortran (Fortran 2008) (103 keywords)](#fortran-fortran-2008-103-keywords)
-* [Go (1.14) (25 keywords)](#go-114-25-keywords)
-* [JS (ES2019) (34 keywords)](#js-es2019-34-keywords)
+* [Go (1.15) (25 keywords)](#go-115-25-keywords)
+* [JS (ES2020) (38 keywords)](#js-es2020-38-keywords)
 * [Java (SE 14) (51 keywords)](#java-se-14-51-keywords)
-* [Kotlin (1.3) (76 keywords)](#kotlin-13-76-keywords)
+* [Kotlin (1.4) (79 keywords)](#kotlin-14-79-keywords)
 * [Lua (5.3) (22 keywords)](#lua-53-22-keywords)
-* [PHP (7.0) (69 keywords)](#php-70-69-keywords)
+* [MATLAB (R2020a) (20 keywords)](#matlab-r2020a-20-keywords)
+* [Objective-C (2.0) (85 keywords)](#objective-c-20-85-keywords)
+* [PHP (7.4) (69 keywords)](#php-74-69-keywords)
 * [Python (2.7) (31 keywords)](#python-27-31-keywords)
 * [Python (3.8) (35 keywords)](#python-38-35-keywords)
-* [R (3.5) (21 keywords)](#r-35-21-keywords)
+* [R (4.0) (21 keywords)](#r-40-21-keywords)
 * [Ruby (2.7) (41 keywords)](#ruby-27-41-keywords)
-* [Rust (1.43) (40 keywords)](#rust-143-40-keywords)
+* [Rust (1.46) (53 keywords)](#rust-146-53-keywords)
 * [Scala (2.13) (40 keywords)](#scala-213-40-keywords)
-* [Swift (5.2) (96 keywords)](#swift-52-96-keywords)
+* [Swift (5.3) (97 keywords)](#swift-53-97-keywords)
+* [Visual Basic (2019) (217 keywords)](#visual-basic-2019-217-keywords)
 
 ### C (ANSI) (32 keywords)
 | | | | |
@@ -72,7 +78,7 @@ Don't see a language here? Please open a pull request adding it!
 #### Sources:
 
 [http://www.open-std.org/jtc1/sc22/wg14/www/abq/c17_updated_proposed_fdis.pdf](http://www.open-std.org/jtc1/sc22/wg14/www/abq/c17_updated_proposed_fdis.pdf)
-### C# (ISO/IEC 23270:2018) (77 keywords)
+### C# (8.0) (107 keywords)
 | | | | |
 |---|---|---|---|
 |  abstract | as | base | bool |
@@ -94,13 +100,20 @@ Don't see a language here? Please open a pull request adding it!
 |  true | try | typeof | uint |
 |  ulong | unchecked | unsafe | ushort |
 |  using | virtual | void | volatile |
-|  while |
+|  while | add | alias | ascending |
+|  async | await | by | descending |
+|  dynamic | equals | from | get |
+|  global | group | into | join |
+|  let | nameof | notnull | on |
+|  orderby | partial | remove | select |
+|  set | unmanaged | value | var |
+|  when | where | yield |
 
 
 #### Sources:
 
 [https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
-### C++ (C++17) (73 keywords)
+### C++ (C++17) (84 keywords)
 | | | | |
 |---|---|---|---|
 |  alignas | alignof | asm | auto |
@@ -121,13 +134,42 @@ Don't see a language here? Please open a pull request adding it!
 |  true | try | typedef | typeid |
 |  typename | union | unsigned | using |
 |  virtual | void | volatile | wchar_t |
-|  while |
+|  while | and | and_eq | bitand |
+|  bitor | compl | not | not_eq |
+|  or | or_eq | xor | xor_eq |
 
 
 #### Sources:
 
 [http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf)
-### Dart (1) (33 keywords)
+### C++ (C++98) (74 keywords)
+| | | | |
+|---|---|---|---|
+|  asm | auto | bool | break |
+|  case | catch | char | class |
+|  const | const_cast | continue | default |
+|  delete | do | double | dynamic_cast |
+|  else | enum | explicit | export |
+|  extern | false | float | for |
+|  friend | goto | if | inline |
+|  int | long | mutable | namespace |
+|  new | operator | private | protected |
+|  public | register | reinterpret_cast | return |
+|  short | signed | sizeof | static |
+|  static_cast | struct | switch | template |
+|  this | throw | true | try |
+|  typedef | typeid | typename | union |
+|  unsigned | using | virtual | void |
+|  volatile | wchar_t | while | and |
+|  and_eq | bitand | bitor | compl |
+|  not | not_eq | or | or_eq |
+|  xor | xor_eq |
+
+
+#### Sources:
+
+[http://www.lirmm.fr/~ducour/Doc-objets/ISO+IEC+14882-1998.pdf](http://www.lirmm.fr/~ducour/Doc-objets/ISO+IEC+14882-1998.pdf)
+### Dart (2.2) (33 keywords)
 | | | | |
 |---|---|---|---|
 |  assert | break | case | catch |
@@ -143,7 +185,7 @@ Don't see a language here? Please open a pull request adding it!
 
 #### Sources:
 
-[http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-408.pdf](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-408.pdf)
+[https://dart.dev/guides/language/specifications/DartLangSpec-v2.2.pdf](https://dart.dev/guides/language/specifications/DartLangSpec-v2.2.pdf)
 ### Elixir (1.10) (15 keywords)
 | | | | |
 |---|---|---|---|
@@ -205,7 +247,7 @@ Don't see a language here? Please open a pull request adding it!
 #### Sources:
 
 [http://fortranwiki.org/fortran/show/Keywords](http://fortranwiki.org/fortran/show/Keywords)
-### Go (1.14) (25 keywords)
+### Go (1.15) (25 keywords)
 | | | | |
 |---|---|---|---|
 |  break | case | chan | const |
@@ -220,16 +262,17 @@ Don't see a language here? Please open a pull request adding it!
 #### Sources:
 
 [https://golang.org/ref/spec#Keywords](https://golang.org/ref/spec#Keywords)
-### JS (ES2019) (34 keywords)
+### JS (ES2020) (38 keywords)
 | | | | |
 |---|---|---|---|
 |  await | break | case | catch |
 |  class | const | continue | debugger |
 |  default | delete | do | else |
-|  export | extends | finally | for |
-|  function | if | import | in |
-|  instanceof | new | return | super |
-|  switch | this | throw | try |
+|  enum | export | extends | false |
+|  finally | for | function | if |
+|  import | in | instanceof | new |
+|  null | return | super | switch |
+|  this | throw | true | try |
 |  typeof | var | void | while |
 |  with | yield |
 
@@ -258,7 +301,7 @@ Don't see a language here? Please open a pull request adding it!
 #### Sources:
 
 [https://docs.oracle.com/javase/specs/jls/se11/html/jls-3.html#jls-3.9](https://docs.oracle.com/javase/specs/jls/se11/html/jls-3.html#jls-3.9)
-### Kotlin (1.3) (76 keywords)
+### Kotlin (1.4) (79 keywords)
 | | | | |
 |---|---|---|---|
 |  as | as? | break | class |
@@ -267,19 +310,20 @@ Don't see a language here? Please open a pull request adding it!
 |  !in | interface | is | !is |
 |  null | object | package | return |
 |  super | this | throw | true |
-|  try | typealias | val | var |
-|  when | while | by | catch |
-|  constructor | delegate | dynamic | field |
-|  file | finally | get | import |
-|  init | param | property | receiver |
-|  set | setparam | where | actual |
-|  abstract | annotation | companion | const |
-|  crossinline | data | enum | expect |
-|  external | final | infix | inline |
-|  inner | internal | lateinit | noinline |
-|  open | operator | out | override |
-|  private | protected | public | reified |
-|  sealed | suspend | tailrec | vararg |
+|  try | typealias | typeof | val |
+|  var | when | while | by |
+|  catch | constructor | delegate | dynamic |
+|  field | file | finally | get |
+|  import | init | param | property |
+|  receiver | set | setparam | where |
+|  actual | abstract | annotation | companion |
+|  const | crossinline | data | enum |
+|  expect | external | final | infix |
+|  inline | inner | internal | lateinit |
+|  noinline | open | operator | out |
+|  override | private | protected | public |
+|  reified | sealed | suspend | tailrec |
+|  vararg | field | it |
 
 
 #### Sources:
@@ -299,7 +343,50 @@ Don't see a language here? Please open a pull request adding it!
 #### Sources:
 
 [https://www.lua.org/manual/5.3/manual.html#3.1](https://www.lua.org/manual/5.3/manual.html#3.1)
-### PHP (7.0) (69 keywords)
+### MATLAB (R2020a) (20 keywords)
+| | | | |
+|---|---|---|---|
+|  break | case | catch | classdef |
+|  continue | else | elseif | end |
+|  for | function | global | if |
+|  otherwise | parfor | persistent | return |
+|  spmd | switch | try | while |
+
+
+#### Sources:
+
+[https://www.mathworks.com/help/matlab/ref/iskeyword.html](https://www.mathworks.com/help/matlab/ref/iskeyword.html)
+### Objective-C (2.0) (85 keywords)
+| | | | |
+|---|---|---|---|
+|  asm | auto | break | case |
+|  char | const | continue | default |
+|  do | double | else | enum |
+|  extern | float | for | goto |
+|  if | inline | int | long |
+|  register | restrict | return | short |
+|  signed | sizeof | static | struct |
+|  switch | typedef | union | unsigned |
+|  void | volatile | while | _Bool |
+|  _Complex | __block | Imaginary | id |
+|  Class | SEL | IMP | BOOL |
+|  nil | Nil | YES | NO |
+|  self | super | _cmd | __strong |
+|  __weak | __autoreleasing | __unsafe_unretained | oneway |
+|  In | out | inout | bycopy |
+|  byref | @autoreleasepool | @interface | @implementation |
+|  @protocol | @end | @private | @protected |
+|  @public | @package | @try | @throw |
+|  @catch() | @finally | @property | @synthesize |
+|  @dynamic | @class | @selector() | @protocol() |
+|  @required | @optional | @encode | @"string" |
+|  @synchronized() |
+
+
+#### Sources:
+
+[https://learning.oreilly.com/library/view/learning-objective-c-20/9780321712110/](https://learning.oreilly.com/library/view/learning-objective-c-20/9780321712110/)
+### PHP (7.4) (69 keywords)
 | | | | |
 |---|---|---|---|
 |  __halt_compiler() | abstract | and | array() |
@@ -358,7 +445,7 @@ Don't see a language here? Please open a pull request adding it!
 #### Sources:
 
 [https://docs.python.org/3.8/reference/lexical_analysis.html#keywords](https://docs.python.org/3.8/reference/lexical_analysis.html#keywords)
-### R (3.5) (21 keywords)
+### R (4.0) (21 keywords)
 | | | | |
 |---|---|---|---|
 |  ... | ..1 | FALSE | Inf |
@@ -391,7 +478,7 @@ Don't see a language here? Please open a pull request adding it!
 #### Sources:
 
 [https://docs.ruby-lang.org/en/2.7.0/keywords_rdoc.html](https://docs.ruby-lang.org/en/2.7.0/keywords_rdoc.html)
-### Rust (1.43) (40 keywords)
+### Rust (1.46) (53 keywords)
 | | | | |
 |---|---|---|---|
 |  as | break | const | continue |
@@ -403,7 +490,11 @@ Don't see a language here? Please open a pull request adding it!
 |  Self | static | struct | super |
 |  trait | true | type | unsafe |
 |  use | where | while | async |
-|  await | dyn | union | \'static |
+|  await | dyn | abstract | become |
+|  box | do | final | macro |
+|  override | priv | typeof | unsized |
+|  virtual | yield | try | union |
+|  \'static |
 
 
 #### Sources:
@@ -427,7 +518,7 @@ Don't see a language here? Please open a pull request adding it!
 #### Sources:
 
 [https://scala-lang.org/files/archive/spec/2.13/01-lexical-syntax.html](https://scala-lang.org/files/archive/spec/2.13/01-lexical-syntax.html)
-### Swift (5.2) (96 keywords)
+### Swift (5.3) (97 keywords)
 | | | | |
 |---|---|---|---|
 |  associatedtype | class | deinit | enum |
@@ -445,18 +536,82 @@ Don't see a language here? Please open a pull request adding it!
 |  Self | throw | throws | true |
 |  try | _ | #available | #colorLiteral |
 |  #column | #else | #elseif | #endif |
-|  #error | #file | #fileLiteral | #function |
-|  #if | #imageLiteral | #line | #selector |
-|  #sourceLocation | #warning | associativity | convenience |
-|  dynamic | didSet | final | get |
-|  infix | indirect | lazy | left |
-|  mutating | none | nonmutating | optional |
-|  override | postfix | precedence | prefix |
-|  Protocol | required | right | set |
-|  Type | unowned | weak | willSet |
+|  #error | #file | #filePath | #fileLiteral |
+|  #function | #if | #imageLiteral | #line |
+|  #selector | #sourceLocation | #warning | associativity |
+|  convenience | dynamic | didSet | final |
+|  get | infix | indirect | lazy |
+|  left | mutating | none | nonmutating |
+|  optional | override | postfix | precedence |
+|  prefix | Protocol | required | right |
+|  set | Type | unowned | weak |
+|  willSet |
 
 
 #### Sources:
 
 [https://docs.swift.org/swift-book/ReferenceManual/LexicalStructure.html](https://docs.swift.org/swift-book/ReferenceManual/LexicalStructure.html)
+### Visual Basic (2019) (217 keywords)
+| | | | |
+|---|---|---|---|
+|  AddHandler | AddressOf | Alias | And |
+|  AndAlso | As | Boolean | ByRef |
+|  Byte | ByVal | Call | Case |
+|  Catch | CBool | CByte | CChar |
+|  CDate | CDbl | CDec | Char |
+|  CInt | Class | CLng | CObj |
+|  Const | Continue | CSByte | CShort |
+|  CSng | CStr | CType | CUInt |
+|  CULng | CUShort | Date | Decimal |
+|  Declare | Default | Delegate | Dim |
+|  DirectCast | Do | Double | Each |
+|  Else | ElseIf | End | EndIf |
+|  Enum | Erase | Error | Event |
+|  Exit | False | Finally | For |
+|  For Each | Friend | Function | Get |
+|  GetType | GetXMLNamespace | Global | GoSub |
+|  GoTo | Handles | If | If() |
+|  Implements | Imports | In | Inherits |
+|  Integer | Interface | Is | IsNot |
+|  Let | Lib | Like | Long |
+|  Loop | Me | Mod | Module |
+|  MustInherit | MustOverride | MyBase | MyClass |
+|  NameOf | Namespace | Narrowing | New |
+|  Next | Not | Nothnig | NotInheritable |
+|  NotOverridable | Object | Of | On |
+|  Operator | Option | Optional | Or |
+|  OrElse | Out | Overloads | Overridable |
+|  Overrides | ParamArray | Partial | Private |
+|  Property | Protected | Public | RaiseEvent |
+|  ReadOnly | ReDim | REM | RemoveHandler |
+|  Resume | Return | SByte | Select |
+|  Set | Shadows | Shared | Short |
+|  Single | Static | Step | Stop |
+|  String | Structure | Sub | SyncLock |
+|  Then | Throw | To | True |
+|  Try | TryCast | TypeOf | UInteger |
+|  ULong | UShort | Using | Variant |
+|  Wend | When | While | Widening |
+|  With | WithEvents | WriteOnly | Xor |
+|  #Const | #Else | #ElseIf | #End |
+|  #If | = | & | &= |
+|  * | *= | / | /= |
+|  \ | \= | ^ | ^= |
+|  + | += | - | -= |
+|  >> | >>= | << | <<= |
+|  Aggregate | Ansi | Assembly | Async |
+|  Auto | Await | Binary | Compare |
+|  Custom | Distinct | Equals | Explicit |
+|  From | Group By | Group Join | Into |
+|  IsFalse | IsTrue | Iterator | Join |
+|  Key | Mid | Off | Order By |
+|  Preserve | Skip | Skip While | Strict |
+|  Take | Take While | Text | Unicode |
+|  Until | Where | Yield | #ExternalSource |
+|  #Region |
+
+
+#### Sources:
+
+[https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/keywords/](https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/keywords/)
 
