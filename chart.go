@@ -9,9 +9,9 @@ import (
 	"strconv"
 	"text/template"
 
-	"github.com/go-yaml/yaml"
 	"github.com/gosimple/slug"
-	"github.com/wcharczuk/go-chart"
+	"github.com/wcharczuk/go-chart/v2"
+	"gopkg.in/yaml.v3"
 )
 
 type Languages []Language
@@ -103,7 +103,7 @@ func main() {
 	//render and save the chart
 	chartData := make([]chart.Value, len(data))
 	for i := range data {
-		chartData[i] = chart.Value{Value: float64(len(data[i].Keywords)), Label: fmt.Sprintf("%s (%s)", data[i].Name, data[i].Version), Style: chart.StyleShow()}
+		chartData[i] = chart.Value{Value: float64(len(data[i].Keywords)), Label: fmt.Sprintf("%s (%s)", data[i].Name, data[i].Version), Style: chart.Shown()}
 	}
 
 	//make ticks
@@ -120,14 +120,14 @@ func main() {
 
 	barchart := chart.BarChart{
 		Title:      "Programming languages by keyword count",
-		TitleStyle: chart.StyleShow(),
+		TitleStyle: chart.Shown(),
 		XAxis: chart.Style{
-			Show:                true,
+			Hidden:              false,
 			TextRotationDegrees: 90,
 		},
 		YAxis: chart.YAxis{
 			Name:      "Keywords",
-			Style:     chart.StyleShow(),
+			Style:     chart.Shown(),
 			Ascending: true,
 			ValueFormatter: func(v interface{}) string {
 				return fmt.Sprintf("%d", int(v.(float64)))

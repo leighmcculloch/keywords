@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+      - run: go run chart.go
+      - run: |
+          git config --global user.email "nick@e3b0c442.dev"
+          git config --global user.name "Nick Meyer"
+          git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/e3b0c442/keywords
+          git checkout -b new-main
+          git add README.md chart.png
+          git commit -m "[skip ci] Rebuild README.md and chart.png from chart.yaml update"
+          git checkout main
+          git merge new-main
+          git push origin main
